@@ -1,60 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
+import { useTypingEffect } from '../hooks/useTypingEffect'
+import { useScrollToSection } from '../hooks/useScrollToSection'
 
 function Navbar() {
-    const [displayText, setDisplayText] = useState('');
-    const animationRef = useRef({
-        currentIndex: 0,
-        isDeleting: false,
-        fullText: "<Abero-Dev/>",
-        typingSpeed: 100,
-        deletingSpeed: 50,
-        pauseTime: 2000
-    });
-
-    const scrollToSection = (id: string) => {
-        const section = document.getElementById(id)
-        if (section) section.scrollIntoView({ behavior: 'smooth' })
-    }
-
-    useEffect(() => {
-        const animate = () => {
-            const state = animationRef.current;
-
-            if (!state.isDeleting) {
-                if (state.currentIndex <= state.fullText.length) {
-                    setDisplayText(state.fullText.substring(0, state.currentIndex));
-                    state.currentIndex++;
-                    setTimeout(animate, state.typingSpeed);
-                } else {
-                    setTimeout(() => {
-                        animationRef.current.isDeleting = true;
-                        animate();
-                    }, state.pauseTime);
-                }
-            } else {
-                if (state.currentIndex > 0) {
-                    setDisplayText(state.fullText.substring(0, state.currentIndex - 1));
-                    state.currentIndex--;
-                    setTimeout(animate, state.deletingSpeed);
-                } else {
-                    state.isDeleting = false;
-                    setTimeout(() => {
-                        state.currentIndex = 0;
-                        animate();
-                    }, 500);
-                }
-            }
-        };
-
-        animate();
-
-        return () => {
-        };
-    }, []); 
+    const displayText = useTypingEffect('<Abero-Dev/>')
+    const scrollToSection = useScrollToSection()
 
     return (
-        <nav className="h-40 top-0 w-screen flex justify-around items-center fixed">
-            {/* Contenedor con ancho fijo */}
+        <nav className="h-40 top-0 w-screen flex justify-around items-center fixed z-50">
             <div className="flex justify-center min-w-[300px]">
                 <span className="text-3xl text-green-500 font-bold drop-shadow-green-700 drop-shadow-xl inline-block min-w-[300px] text-center">
                     {displayText}
@@ -63,13 +15,15 @@ function Navbar() {
             </div>
 
             <div className="flex gap-x-10 text-2xl text-stone-100">
-                <button className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300" onClick={() => scrollToSection("Experiencia")}>Experiencia</button>
-                <button className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300" onClick={() => scrollToSection("Tecnologías")}>Tecnologías</button>
-                <button className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300" onClick={() => scrollToSection("Proyecto")}>Proyecto</button>
-                <button className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300" onClick={() => scrollToSection("Contacto")}>Contacto</button>
+                <button onClick={() => scrollToSection('Experiencia')} className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300">Experiencia</button>
+                <button onClick={() => scrollToSection('Tecnologías')} className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300">Tecnologías</button>
+                <button onClick={() => scrollToSection('Proyecto')} className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300">Proyecto</button>
+                <button onClick={() => scrollToSection('Contacto')} className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300">Contacto</button>
             </div>
 
-            <button className="px-6 py-4 bg-green-600 text-white text-3xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-700 transition-colors duration-300">Descargar CV</button>
+            <button className="px-6 py-4 bg-green-600 text-white text-3xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-700 transition-colors duration-300">
+                Descargar CV
+            </button>
         </nav>
     )
 }
