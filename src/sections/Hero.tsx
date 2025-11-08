@@ -1,10 +1,10 @@
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 
 
 function Hero() {
 
     return (
-        <section className="h-screen text-white flex justify-around items-center">
+        <section className="h-screen text-white flex justify-around -space-x-30 items-center">
             <div className="max-w-[35%] flex flex-col gap-y-5">
                 <p className="text-3xl font-bold">DESARROLLADOR FRONTEND</p>
                 <p className="text-[80px] font-bold">Soy <span className="text-green-500">Abel Robaina</span></p>
@@ -33,14 +33,32 @@ function Hero() {
                         Contáctame
                     </button>
                 </div>
-                <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div className="mt-10 flex gap-x-6">
+                    <a
+                        href="https://github.com/Abero-dev"
+                        target="_blank"
+                        rel='noopener noreferrer'
+                    >
+                        <Github className="w-12 h-12 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/abel-robaina-89a918360/"
+                        target="_blank"
+                        rel='noopener noreferrer'
+                    >
+                        <Linkedin className="w-12 h-12 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
+                    </a>
+                    <a
+                        href="mailto:abel04.mata@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Mail className="w-12 h-12 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
+                    </a>
                 </div>
             </div>
             <div>
-                <img alt="mi_foto" src="vite.svg" className="w-80 h-80" />
+                <img alt="mi_foto" src="img/profile.webp" className="w-150 h-150 rounded-full border-3 drop-shadow-2xl drop-shadow-green-950 border-transparent hover:border-green-800 hover:scale-110 transition duration-300" />
             </div>
         </section>
     )
