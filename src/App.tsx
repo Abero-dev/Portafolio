@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Header";
 import Home from "./sections/Hero";
 
 function App() {
