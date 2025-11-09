@@ -1,6 +1,7 @@
 import Navbar from "./components/Header";
 import Experiencia from "./sections/Experiencia";
 import Hero from "./sections/Hero";
+import Proyectos from "./sections/Proyectos";
 import Tecnologías from "./sections/Tecnologías";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <Experiencia />
       <Tecnologías />
+      <Proyectos/>
     </div>
   )
 }
