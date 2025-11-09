@@ -19,7 +19,7 @@ function Header() {
 
     return (
         <header
-            className={`fixed flex flex-1 lg:flex-row flex-col justify-around items-center lg:h-30 h-60 top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+            className={`fixed flex flex-1 lg:flex-row md:flex-wrap flex-col justify-around items-center lg:h-30 h-60 top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
                 ? 'bg-Background/80 backdrop-blur-lg border-b border-border'
                 : ''
                 }`}
