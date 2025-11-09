@@ -2,8 +2,8 @@ import TechCard from "../components/TechCard"
 
 function Tecnologías() {
     return (
-        <section id="Tecnologías" className="min-h-screen flex flex-col justify-center items-center gap-y-10 lg:mt-0 mt-70">
-            <h2 className="text-5xl text-green-500 font-bold">Tecnologías</h2>
+        <section id="Tecnologías" className="min-h-screen flex flex-col justify-center items-center gap-y-10 lg:mt-0 mt-70 bg-linear-to-br from-black via-black to-green-950 pb-15">
+            <h2 className="text-6xl text-green-500 font-bold">Tecnologías</h2>
             <p className="text-white text-2xl lg:p-0 lg:text-left text-center px-2">
                 A continuación se muestran las tecnologías con las que he interactuado recientemente:
             </p>

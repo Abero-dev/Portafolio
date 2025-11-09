@@ -1,3 +1,5 @@
+import TechTag from "@/components/TechTag";
+
 const techs: string[] = ["HTML5", "CSS", "TailwindCSS", "TypeScript", "React", "Tanstack Query", "Docker", "Playwright"];
 
 function Experiencia() {
@@ -24,7 +26,7 @@ function Experiencia() {
                 </div>
                 <div className="flex gap-x-5 flex-wrap gap-y-4">
                     {techs.map(t =>
-                        <p className="border-2 border-green-800 bg-green-950 text-xl text-green-400 px-4 py-2 rounded-full font-semibold">{t}</p>
+                        <TechTag tech={t} />
                     )}
                 </div>
             </div>
