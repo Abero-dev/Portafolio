@@ -1,11 +1,13 @@
 import Navbar from "./components/Header";
-import Home from "./sections/Hero";
+import Experiencia from "./sections/Experiencia";
+import Hero from "./sections/Hero";
 
 function App() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar />
-      <Home />
+      <Hero />
+      <Experiencia />
     </div>
   )
 }
