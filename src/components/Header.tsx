@@ -24,20 +24,45 @@ function Header() {
                 }`}
         >
             <div className="flex justify-center min-w-[300px] lg:mt-0 mt-5 max-w-full">
-                <span className="text-3xl text-green-500 font-bold drop-shadow-green-700 drop-shadow-xl inline-block min-w-[300px] text-center max-w-full overflow-hidden">
+                <span
+                    className="text-3xl text-green-500 font-bold drop-shadow-green-700 drop-shadow-xl inline-block min-w-[300px] text-center max-w-full overflow-hidden cursor-pointer"
+                    onClick={() => scrollToSection('Hero')}
+                >
                     {displayText}
                     <span className="animate-pulse">|</span>
                 </span>
             </div>
 
             <div className="lg:flex lg:gap-x-10 text-2xl text-stone-100 grid grid-cols-2 lg:space-x-0 lg:space-y-0 space-x-2 space-y-2 max-w-full px-4">
-                <button onClick={() => scrollToSection('Experiencia')} className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300 px-2 py-1 text-base lg:text-2xl">Experiencia</button>
-                <button onClick={() => scrollToSection('Tecnologías')} className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300 px-2 py-1 text-base lg:text-2xl">Tecnologías</button>
-                <button onClick={() => scrollToSection('Proyecto')} className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300 px-2 py-1 text-base lg:text-2xl">Proyecto</button>
-                <button onClick={() => scrollToSection('Contacto')} className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300 px-2 py-1 text-base lg:text-2xl">Contacto</button>
+                <button
+                    onClick={() => scrollToSection('Experiencia')}
+                    className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300 px-2 py-1 text-base lg:text-2xl"
+                >
+                    Experiencia
+                </button>
+                <button
+                    onClick={() => scrollToSection('Tecnologías')}
+                    className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300 px-2 py-1 text-base lg:text-2xl"
+                >
+                    Tecnologías
+                </button>
+                <button
+                    onClick={() => scrollToSection('Proyectos')}
+                    className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300 px-2 py-1 text-base lg:text-2xl"
+                >
+                    Proyectos
+                </button>
+                <button
+                    onClick={() => scrollToSection('Contacto')}
+                    className="cursor-pointer drop-shadow-xl drop-shadow-stone-600 hover:scale-125 transition-transform duration-300 px-2 py-1 text-base lg:text-2xl"
+                >
+                    Contacto
+                </button>
             </div>
 
-            <button className="px-4 py-3 bg-green-600 text-white text-xl lg:text-3xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-700 transition-colors duration-300 mx-4">
+            <button
+                className="px-4 py-3 bg-green-600 text-white text-xl lg:text-3xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-700 transition-colors duration-300 mx-4"
+            >
                 Descargar CV
             </button>
         </header>

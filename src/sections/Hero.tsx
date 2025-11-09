@@ -3,7 +3,7 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 
 function Hero() {
     return (
-        <section className="min-h-screen text-white flex lg:flex-row flex-col justify-around lg:mt-0 mt-75 lg:-space-x-30 items-center bg-linear-to-br from-black via-black to-green-950 overflow-hidden px-4">
+        <section id="Hero" className="min-h-screen text-white flex lg:flex-row flex-col justify-around lg:mt-0 mt-75 lg:-space-x-30 items-center bg-linear-to-br from-black via-black to-green-950 overflow-hidden px-4">
 
             <div className="flex justify-center lg:mt-0 max-w-full">
                 <img
