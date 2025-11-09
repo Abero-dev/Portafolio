@@ -1,6 +1,13 @@
 export function useScrollToSection() {
     return (id: string) => {
         const section = document.getElementById(id)
-        if (section) section.scrollIntoView({ behavior: 'smooth' })
+        if (!section) return
+
+        const isMobile = window.innerWidth <= 768
+
+        const offset = isMobile ? 350 : 0
+        const top = section.getBoundingClientRect().top + window.scrollY - offset
+
+        window.scrollTo({ top, behavior: 'smooth' })
     }
 }
