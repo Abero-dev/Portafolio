@@ -1,3 +1,5 @@
+const techs: string[] = ["HTML5", "CSS", "TailwindCSS", "TypeScript", "React", "Tanstack Query", "Docker", "Playwright"];
+
 function Experiencia() {
     return (
         <section id="Experiencia" className="min-h-screen flex flex-col justify-center items-center gap-y-10">
@@ -21,17 +23,12 @@ function Experiencia() {
                     </p>
                 </div>
                 <div className="flex gap-x-5">
-                    <p className="border-2 border-green-800 bg-green-950 text-xl text-green-400 px-4 py-2 rounded-full font-semibold">HTML 5</p>
-                    <p className="border-2 border-green-800 bg-green-950 text-xl text-green-400 px-4 py-2 rounded-full font-semibold">CSS</p>
-                    <p className="border-2 border-green-800 bg-green-950 text-xl text-green-400 px-4 py-2 rounded-full font-semibold">TypeScript</p>
-                    <p className="border-2 border-green-800 bg-green-950 text-xl text-green-400 px-4 py-2 rounded-full font-semibold">TailwindCSS</p>
-                    <p className="border-2 border-green-800 bg-green-950 text-xl text-green-400 px-4 py-2 rounded-full font-semibold">React</p>
-                    <p className="border-2 border-green-800 bg-green-950 text-xl text-green-400 px-4 py-2 rounded-full font-semibold">Tanstack/React Query</p>
-                    <p className="border-2 border-green-800 bg-green-950 text-xl text-green-400 px-4 py-2 rounded-full font-semibold">Docker</p>
-                    <p className="border-2 border-green-800 bg-green-950 text-xl text-green-400 px-4 py-2 rounded-full font-semibold">Playwright</p>
+                    {techs.map(t =>
+                        <p className="border-2 border-green-800 bg-green-950 text-xl text-green-400 px-4 py-2 rounded-full font-semibold">{t}</p>
+                    )}
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 
