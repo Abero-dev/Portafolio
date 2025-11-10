@@ -9,7 +9,7 @@ function Experiencia() {
                 <p className="text-white text-6xl font-bold">Experiencia <span className="text-green-500">Profesional</span></p>
                 <p className="text-white text-2xl lg:p-0 px-2">Experiencia consolidada en el desarrollo de soluciones digitales innovadoras.</p>
             </div>
-            <div className="bg-[#00120c] min-h-40 max-w-[80%] border-2 border-green-950 rounded-xl px-12 py-8 flex flex-col gap-y-16 hover:border-green-700 transition-colors duration-300">
+            <div className="bg-[#00120c] min-h-40 max-w-[80%] border-3 border-green-950 rounded-xl px-12 py-8 flex flex-col gap-y-16 hover:border-green-700 transition-colors duration-300">
                 <div className="flex lg:justify-between lg:gap-y-0 gap-y-10 lg:flex-row flex-col items-center gap-x-40 text-white">
                     <div className="space-y-2">
                         <p className="text-4xl font-bold">Desarrollador Frontend</p>

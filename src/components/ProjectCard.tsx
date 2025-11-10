@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 function ProjectCard({ img, title, desc, techs, codeLink }: ProjectCardProps) {
     return (
-        <div className="flex flex-col border-2 border-green-950 rounded-t-xl rounded-b-xl bg-[#00120c] group">
+        <div className="flex flex-col border-3 border-green-950 rounded-t-xl rounded-b-xl bg-[#00120c] group hover:border-green-700 transition-all duration-300">
             <div className="w-full lg:h-100 h-70 bg-blue-500 overflow-hidden rounded-t-xl">
                 <img
                     src={img}

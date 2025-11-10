@@ -1,4 +1,5 @@
 import Navbar from "./components/Header";
+import Contact from "./sections/Contact";
 import Experiencia from "./sections/Experiencia";
 import Hero from "./sections/Hero";
 import Proyectos from "./sections/Proyectos";
@@ -11,7 +12,8 @@ function App() {
       <Hero />
       <Experiencia />
       <Tecnologías />
-      <Proyectos/>
+      <Proyectos />
+      <Contact />
     </div>
   )
 }
