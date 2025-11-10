@@ -5,7 +5,11 @@ function Hero() {
     return (
         <section id="Hero" className="min-h-screen text-white flex lg:flex-row flex-col justify-around lg:mt-0 mt-75 lg:-space-x-30 items-center bg-linear-to-br from-black via-black to-green-950 overflow-hidden px-4">
 
-            <div className="flex justify-center lg:mt-0 max-w-full">
+            <div
+                className="flex justify-center lg:mt-0 max-w-full"
+                data-aos="zoom-in"
+                data-aos-duration="1500"
+            >
                 <img
                     alt="mi_foto"
                     src="img/profile.webp"
@@ -14,14 +18,38 @@ function Hero() {
             </div>
 
             <div className="lg:max-w-[45%] lg:max-h-[65%] flex flex-col gap-y-5 px-2 flex-wrap">
-                <p className="lg:text-[70px] text-4xl font-bold md:text-center lg:text-left text-center leading-tight">
+                <p
+                    className="lg:text-[70px] text-4xl font-bold md:text-center lg:text-left text-center leading-tight"
+                    data-aos="fade-left"
+                    data-aos-duration="500"
+                    data-aos-delay="1500"
+                    data-aos-once="false"
+                >
                     Soy <span className="text-green-500">Abel Robaina</span>, Frontend Developer
                 </p>
-                <p className="lg:text-5xl text-xl lg:text-left text-center">
+                <p
+                    className="lg:text-5xl text-xl lg:text-left text-center"
+                    data-aos="fade-left"
+                    data-aos-duration="500"
+                    data-aos-delay="2000"
+                    data-aos-once="false"
+                >
                     {"{usuario.status === 'complacido' && <span>🥳💚</span>}"}
                 </p>
-                <hr className="border-[3px] border-dashed border-green-600 my-6 lg:mx-0 mx-4" />
-                <p className="lg:text-2xl text-lg lg:mx-0 mx-2 text-center lg:text-left leading-relaxed">
+                <hr
+                    className="border-[3px] border-dashed border-green-600 my-6 lg:mx-0 mx-4"
+                    data-aos="fade-left"
+                    data-aos-duration="500"
+                    data-aos-delay="2500"
+                    data-aos-once="false"
+                />
+                <p
+                    className="lg:text-2xl text-lg lg:mx-0 mx-2 text-center lg:text-left leading-relaxed"
+                    data-aos="fade-left"
+                    data-aos-duration="500"
+                    data-aos-delay="3000"
+                    data-aos-once="false"
+                >
                     <span className="font-bold text-green-600">Enfocado </span>
                     en crear GUIs
                     <span className="font-bold text-green-600"> intuitivas </span>
@@ -36,7 +64,13 @@ function Hero() {
                     en cada producto.
                 </p>
 
-                <div className="flex lg:flex-row flex-col items-center lg:gap-x-10 lg:gap-y-0 gap-y-6 mt-10 flex-wrap justify-center lg:justify-start">
+                <div
+                    className="flex lg:flex-row flex-col items-center lg:gap-x-10 lg:gap-y-0 gap-y-6 mt-10 flex-wrap justify-center lg:justify-start"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="3500"
+                    data-aos-once="false"
+                >
                     <button className="flex items-center gap-x-3 px-4 py-3 bg-green-600 text-stone-300 text-lg lg:text-2xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-800 transition-colors duration-300">
                         <p>Ver Proyectos</p>
                         <ArrowDown size={30} />
@@ -46,7 +80,13 @@ function Hero() {
                     </button>
                 </div>
 
-                <div className="flex justify-center lg:justify-normal gap-x-4 mt-4">
+                <div
+                    className="flex justify-center lg:justify-normal gap-x-4 mt-4"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="3500"
+                    data-aos-once="false"
+                >
                     <a href="https://github.com/Abero-dev" target="_blank" rel='noopener noreferrer'>
                         <Github className="w-12 h-12 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
                     </a>

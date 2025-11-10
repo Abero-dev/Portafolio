@@ -131,7 +131,6 @@
   }
 }
 
-
 @keyframes onSending {
   0% {transform: rotate(0deg);}
   100% {transform: rotate(45deg);}
@@ -151,3 +150,18 @@
     opacity: 0.2;
   }
 }
+
+  body[data-aos-delay='3500'] [data-aos],
+  [data-aos][data-aos][data-aos-delay='3500'] {
+    transition-delay: 3500ms;
+  }
+
+   body[data-aos-delay='4000'] [data-aos],
+  [data-aos][data-aos][data-aos-delay='4000'] {
+    transition-delay: 4000ms;
+  }
+
+  body[data-aos-delay='4500'] [data-aos],
+  [data-aos][data-aos][data-aos-delay='4500'] {
+    transition-delay: 4500ms;
+  }
