@@ -31,7 +31,7 @@ function Experiencia() {
                 </div>
                 <div className="text-white">
                     <p className="text-2xl font-bold">
-                        Encargado del desarrollo del frontend del Sistema de Vigilancia Tecnológica Vigixtech
+                        Encargado del desarrollo del frontend del Sistema de Vigilancia Tecnológica Vigitech
                         utilizando buenas prácticas de usabilidad en la implementación de GUIs modernas e interactivas
                         con el objetivo de mejorar la experiencia del usuario.
                     </p>

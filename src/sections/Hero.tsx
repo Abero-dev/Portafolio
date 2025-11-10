@@ -1,7 +1,11 @@
+import { useScrollToSection } from "@/hooks/useScrollToSection"
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 
 
 function Hero() {
+
+    const scrollToSection = useScrollToSection()
+
     return (
         <section id="Hero" className="min-h-screen text-white flex lg:flex-row flex-col justify-around lg:mt-0 mt-75 lg:-space-x-30 items-center bg-linear-to-br from-black via-black to-green-950 overflow-hidden px-4">
 
@@ -71,11 +75,11 @@ function Hero() {
                     data-aos-delay="3500"
                     data-aos-once="false"
                 >
-                    <button className="flex items-center gap-x-3 px-4 py-3 bg-green-600 text-stone-300 text-lg lg:text-2xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-800 transition-colors duration-300">
+                    <button onClick={() => scrollToSection('Proyectos')} className="flex items-center gap-x-3 px-4 py-3 bg-green-600 text-stone-300 text-lg lg:text-2xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-800 transition-colors duration-300">
                         <p>Ver Proyectos</p>
                         <ArrowDown size={30} />
                     </button>
-                    <button className="cursor-pointer border-2 border-gray-600 px-4 py-3 rounded-lg text-lg lg:text-2xl hover:border-green-500 hover:scale-110 transition-all duration-300">
+                    <button onClick={() => scrollToSection('Contacto')} className="cursor-pointer border-2 border-gray-600 px-4 py-3 rounded-lg text-lg lg:text-2xl hover:border-green-500 hover:scale-110 transition-all duration-300">
                         Contáctame
                     </button>
                 </div>

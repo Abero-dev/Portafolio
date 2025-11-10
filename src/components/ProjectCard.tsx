@@ -6,12 +6,20 @@ interface ProjectCardProps {
     title: string,
     desc: string,
     techs: string[],
-    codeLink: string | undefined
+    codeLink: string,
+    flip_to: string,
+    delay: string
 }
 
-function ProjectCard({ img, title, desc, techs, codeLink }: ProjectCardProps) {
+function ProjectCard({ img, title, desc, techs, codeLink, flip_to, delay }: ProjectCardProps) {
     return (
-        <div className="flex flex-col border-3 border-green-950 rounded-t-xl rounded-b-xl bg-[#00120c] group hover:border-green-700 transition-all duration-300">
+        <div
+            className="flex flex-col border-3 border-green-950 rounded-t-xl rounded-b-xl bg-[#00120c] group hover:border-green-700 transition-all duration-300"
+            data-aos={`flip-${flip_to}`}
+            data-aos-duration="1000"
+            data-aos-delay={delay}
+            data-aos-once="false"
+        >
             <div className="w-full lg:h-100 h-70 bg-blue-500 overflow-hidden rounded-t-xl">
                 <img
                     src={img}

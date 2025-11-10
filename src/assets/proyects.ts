@@ -3,7 +3,9 @@ type Project = {
     title: string,
     desc: string,
     techs: string[],
-    codeLink: string | undefined
+    codeLink: string,
+    flip_to: string,
+    delay: string
 }
 
 export const projects: Project[] = [
@@ -18,7 +20,9 @@ export const projects: Project[] = [
             "Express.js",
             "MongoDB",
         ],
-        codeLink: "https://github.com/Abero-dev/radar"
+        codeLink: "https://github.com/Abero-dev/radar",
+        flip_to: "right",
+        delay: "700"
     },
     {
         img: "img/QBabel.webp",
@@ -33,7 +37,9 @@ export const projects: Project[] = [
             "Redux Toolkit",
             "Django Rest Framework"
         ],
-        codeLink: "https://github.com/Jose-luis-echemendia/QBabel"
+        codeLink: "https://github.com/Jose-luis-echemendia/QBabel",
+        flip_to: "left",
+        delay: "700"
     },
     {
         img: "img/vigitech.webp",
@@ -47,6 +53,8 @@ export const projects: Project[] = [
             "React",
             "Tanstack Query"
         ],
-        codeLink: "https://github.com/Luke1606/vigitech-official"
+        codeLink: "https://github.com/Luke1606/vigitech-official",
+        flip_to: "right",
+        delay: "100"
     },
 ]

@@ -49,6 +49,10 @@ function SendMailForm() {
         <form
             onSubmit={handleSubmit}
             className='bg-[#00120c] border-3 border-green-950 rounded-2xl p-8 space-y-6'
+            data-aos="fade-right"
+            data-aos-duration="500"
+            data-aos-delay="700"
+            data-aos-once="false"
         >
             <div className='grid sm:grid-cols-2 gap-6'>
                 <div className='space-y-4'>
