@@ -29,7 +29,7 @@ function Contact() {
                             <Phone className='w-8 h-8 text-green-500' />
                         </div>
                         <p className='text-xl font-semibold text-gray-100'>Teléfono</p>
-                        <span className='text-stone-400 text-xl'>+53 56870848</span>
+                        <span className='text-stone-400 text-xl'>+53 58963164</span>
                     </div>
 
                     <div className='p-6 flex flex-col items-center justify-center border-3 border-green-950 rounded-2xl bg-[#00120c] text-center gap-3'>
