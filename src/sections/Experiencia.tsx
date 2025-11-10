@@ -13,12 +13,12 @@ function Experiencia() {
                 <div className="flex lg:justify-between lg:gap-y-0 gap-y-10 lg:flex-row flex-col items-center gap-x-40 text-white">
                     <div className="space-y-2">
                         <p className="text-4xl font-bold">Desarrollador Frontend</p>
-                        <p className="text-2xl font-bold">Centro de Tecnologías Interactivas Vertex - UCI</p>
+                        <p className="text-2xl text-stone-400 font-bold">Centro de Tecnologías Interactivas Vertex - UCI</p>
                     </div>
                     <p className="border-2 border-green-800 bg-green-950 text-xl text-green-400 px-4 py-2 rounded-full font-semibold">2024 - Presente</p>
                 </div>
                 <div className="text-white">
-                    <p className="text-xl font-bold">
+                    <p className="text-2xl font-bold">
                         Encargado del desarrollo del frontend del Sistema de Vigilancia Tecnológica Vigixtech
                         utilizando buenas prácticas de usabilidad en la implementación de GUIs modernas e interactivas
                         con el objetivo de mejorar la experiencia del usuario.

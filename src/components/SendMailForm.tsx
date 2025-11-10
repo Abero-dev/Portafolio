@@ -61,7 +61,7 @@ function SendMailForm() {
                         type='text'
                         placeholder='Tu nombre'
                         required
-                        className='w-full bg-[#000805] border-2 border-green-900 rounded-lg p-3 text-xl text-stone-100 placeholder:text-xl placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all duration-300'
+                        className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-3 text-xl text-stone-100 placeholder:text-xl placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all duration-300'
                     />
                 </div>
                 <div className='space-y-4'>
@@ -77,7 +77,7 @@ function SendMailForm() {
                         type='email'
                         placeholder='tu@email.com'
                         required
-                        className='w-full bg-[#000805] border-2 border-green-900 rounded-lg p-3 text-xl text-stone-100 placeholder:text-xl placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all duration-300'
+                        className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-3 text-xl text-stone-100 placeholder:text-xl placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all duration-300'
                     />
                 </div>
             </div>
@@ -95,14 +95,14 @@ function SendMailForm() {
                     placeholder='Cuéntame sobre tu proyecto...'
                     rows={6}
                     required
-                    className='w-full bg-[#000805] border-2 border-green-900 rounded-lg p-3 text-xl text-stone-100 placeholder:text-xl placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none resize-none transition-all duration-300'
+                    className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-3 text-xl text-stone-100 placeholder:text-xl placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none resize-none transition-all duration-300'
                 ></textarea>
             </div>
 
             <button
                 type='submit'
                 disabled={status === 'sending'}
-                className='w-full bg-green-600 hover:bg-green-700 text-2xl text-white py-4 font-semibold rounded-xl flex items-center justify-center gap-2 transition-all duration-300 drop-shadow-lg drop-shadow-green-900 group'
+                className='w-full bg-green-600 hover:bg-green-800 text-2xl text-white py-4 font-semibold rounded-xl flex items-center justify-center gap-2 transition-all duration-300 drop-shadow-lg drop-shadow-green-900 group'
             >
                 {status === 'sending' ? (
                     'Enviando...'

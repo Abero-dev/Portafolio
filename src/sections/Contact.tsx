@@ -4,7 +4,7 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 function Contact() {
     return (
         <section id="Contacto" className='container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:mt-50 mt-70'>
-            <div className='text-center mb-12 sm:mb-16'>
+            <div className='text-center mb-12 sm:mb-16 lg:mt-40'>
                 <h2 className='text-6xl sm:text-4xl md:text-6xl font-bold mb-4 text-green-600'>
                     Contáctame
                 </h2>

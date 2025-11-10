@@ -61,7 +61,7 @@ function Header() {
             </div>
 
             <button
-                className="px-4 py-3 lg:mt-0 -mt-5 bg-green-600 text-white text-xl lg:text-3xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-700 transition-colors duration-300 mx-4"
+                className="px-4 py-3 lg:mt-0 -mt-5 bg-green-600 text-white text-xl lg:text-3xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-800 transition-colors duration-300 mx-4"
             >
                 Descargar CV
             </button>

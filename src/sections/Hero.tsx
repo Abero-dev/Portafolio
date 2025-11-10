@@ -37,24 +37,24 @@ function Hero() {
                 </p>
 
                 <div className="flex lg:flex-row flex-col items-center lg:gap-x-10 lg:gap-y-0 gap-y-6 mt-10 flex-wrap justify-center lg:justify-start">
-                    <button className="flex items-center gap-x-3 px-4 py-2 bg-green-600 text-white text-lg lg:text-2xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-700 transition-colors duration-300">
+                    <button className="flex items-center gap-x-3 px-4 py-3 bg-green-600 text-stone-300 text-lg lg:text-2xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-800 transition-colors duration-300">
                         <p>Ver Proyectos</p>
                         <ArrowDown size={30} />
                     </button>
-                    <button className="cursor-pointer border-2 border-gray-600 px-4 py-2 rounded-lg text-lg lg:text-2xl hover:border-green-500 hover:scale-110 transition-all duration-300">
+                    <button className="cursor-pointer border-2 border-gray-600 px-4 py-3 rounded-lg text-lg lg:text-2xl hover:border-green-500 hover:scale-110 transition-all duration-300">
                         Contáctame
                     </button>
                 </div>
 
                 <div className="flex justify-center lg:justify-normal gap-x-4 mt-4">
                     <a href="https://github.com/Abero-dev" target="_blank" rel='noopener noreferrer'>
-                        <Github className="w-10 h-10 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
+                        <Github className="w-12 h-12 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
                     </a>
                     <a href="https://www.linkedin.com/in/abel-robaina-89a918360/" target="_blank" rel='noopener noreferrer'>
-                        <Linkedin className="w-10 h-10 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
+                        <Linkedin className="w-12 h-12 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
                     </a>
                     <a href="mailto:abel04.mata@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <Mail className="w-10 h-10 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
+                        <Mail className="w-12 h-12 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
                     </a>
                 </div>
             </div>
