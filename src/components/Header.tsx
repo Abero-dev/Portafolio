@@ -60,11 +60,13 @@ function Header() {
                 </button>
             </div>
 
-            <button
+            <a
                 className="px-4 py-3 lg:mt-0 -mt-5 bg-green-600 text-white text-xl lg:text-3xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-800 transition-colors duration-300 mx-4"
+                href="/pdf/Cv-Abel-Robaina-Mata.pdf"
+                download="Cv-Abel-Robaina-Mata.pdf"
             >
                 Descargar CV
-            </button>
+            </a>
         </header>
     )
 }
