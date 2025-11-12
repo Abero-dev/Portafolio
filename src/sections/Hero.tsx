@@ -11,7 +11,7 @@ function Hero() {
     const { t, language } = useLanguageStore();
 
     return (
-        <section id="Hero" className="min-h-screen text-white flex lg:flex-row flex-col justify-around lg:pt-20 pt-75 lg:-space-x-30 items-center bg-linear-to-br from-black via-black to-green-950 overflow-hidden px-4">
+        <section id="Hero" className="min-h-screen text-white flex lg:flex-row flex-col justify-around lg:pt-10 pt-75 lg:-space-x-30 items-center bg-linear-to-br from-black via-black to-green-950 overflow-hidden px-4">
 
             <div
                 className="flex justify-center lg:mt-0 max-w-full"
@@ -54,18 +54,11 @@ function Hero() {
                 >
                     {'<span>🥳💚</span> }'}
                 </p>
-                <hr
-                    className="border-2 border-dashed border-green-600 my-6 lg:mx-0 mx-4"
-                    data-aos={isSmallScreen ? "fade-up" : "fade-left"}
-                    data-aos-duration="500"
-                    data-aos-delay="2500"
-                    data-aos-once="true"
-                />
                 <p
                     className="lg:text-xl text-lg lg:mx-0 mx-2 text-center lg:text-left leading-relaxed"
                     data-aos={isSmallScreen ? "fade-up" : "fade-left"}
                     data-aos-duration="500"
-                    data-aos-delay="3000"
+                    data-aos-delay="2500"
                     data-aos-once="true"
                 >
                     {language === 'es' ?
@@ -105,7 +98,7 @@ function Hero() {
                     className="flex lg:flex-row flex-col items-center lg:gap-x-10 lg:gap-y-0 gap-y-6 mt-10 flex-wrap justify-center lg:justify-start"
                     data-aos="fade-up"
                     data-aos-duration="500"
-                    data-aos-delay={`${isSmallScreen ? "100" : "3500"}`}
+                    data-aos-delay={`${isSmallScreen ? "100" : "3000"}`}
                     data-aos-once="true"
                 >
                     <button
@@ -127,7 +120,7 @@ function Hero() {
                     className="flex justify-center lg:justify-normal gap-x-4 lg:mt-4 lg:pb-0 pb-4"
                     data-aos="fade-up"
                     data-aos-duration="500"
-                    data-aos-delay={`${isSmallScreen ? "0" : "3500"}`}
+                    data-aos-delay={isSmallScreen ? "0" : "3500"}
                     data-aos-once="true"
                 >
                     <a href="https://github.com/Abero-dev" target="_blank" rel='noopener noreferrer'>
