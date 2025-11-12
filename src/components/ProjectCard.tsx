@@ -18,7 +18,7 @@ function ProjectCard({ img, title, desc, techs, codeLink, flip_to, delay }: Proj
 
     return (
         <div
-            className="flex flex-col border-3 border-green-950 rounded-t-xl rounded-b-xl bg-[#00120c] group hover:border-green-700 transition-all duration-300"
+            className="flex flex-col border-3 border-green-950 rounded-t-xl md:min-w-100 rounded-b-xl bg-[#00120c] group hover:border-green-700 transition-all duration-300"
             data-aos={`flip-${flip_to}`}
             data-aos-duration="1000"
             data-aos-delay={title === "Librería virtual QBabel" ? "100" : delay}
@@ -39,7 +39,7 @@ function ProjectCard({ img, title, desc, techs, codeLink, flip_to, delay }: Proj
                 </div>
                 <div className="flex flex-wrap gap-5">
                     {techs.map(t =>
-                        <TechTag tech={t} />
+                        <TechTag key={t} tech={t} />
                     )}
                 </div>
                 <a

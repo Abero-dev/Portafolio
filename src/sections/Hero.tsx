@@ -11,7 +11,7 @@ function Hero() {
     const { t, language } = useLanguageStore();
 
     return (
-        <section id="Hero" className="min-h-screen text-white flex lg:flex-row flex-col justify-around lg:pt-0 pt-75 lg:-space-x-30 items-center bg-linear-to-br from-black via-black to-green-950 overflow-hidden px-4">
+        <section id="Hero" className="min-h-screen text-white flex lg:flex-row flex-col justify-around lg:pt-20 pt-75 lg:-space-x-30 items-center bg-linear-to-br from-black via-black to-green-950 overflow-hidden px-4">
 
             <div
                 className="flex justify-center lg:mt-0 max-w-full"
@@ -26,10 +26,10 @@ function Hero() {
                 />
             </div>
 
-            <div className="lg:max-w-[40%] flex flex-col gap-y-5 px-2 flex-wrap lg:mt-0 mt-10">
+            <div className={`lg:max-w-[40%] flex flex-col gap-y-5 px-2 flex-wrap lg:mt-0 mt-10`}>
                 <p
                     className="lg:text-5xl text-3xl font-bold md:text-center lg:text-left text-center leading-tight"
-                    data-aos="fade-left"
+                    data-aos={isSmallScreen ? "fade-up" : "fade-left"}
                     data-aos-duration="500"
                     data-aos-delay="1500"
                     data-aos-once="true"
@@ -38,23 +38,32 @@ function Hero() {
                 </p>
                 <p
                     className={'lg:text-3xl text-xl lg:text-left text-center'}
-                    data-aos="fade-left"
+                    data-aos={isSmallScreen ? "fade-up" : "fade-left"}
                     data-aos-duration="500"
                     data-aos-delay="2000"
                     data-aos-once="true"
                 >
-                    {`{${t("usuario")}.status === '${t("complacido")}' && <span>🥳💚</span>}`}
+                    {`{${t("usuario")}.status === '${t("complacido")}' &&`}
+                </p>
+                <p
+                    className="lg:text-3xl text-xl lg:text-left text-center"
+                    data-aos={isSmallScreen ? "fade-up" : "fade-left"}
+                    data-aos-duration="500"
+                    data-aos-delay="2000"
+                    data-aos-once="true"
+                >
+                    {'<span>🥳💚</span> }'}
                 </p>
                 <hr
                     className="border-2 border-dashed border-green-600 my-6 lg:mx-0 mx-4"
-                    data-aos="fade-left"
+                    data-aos={isSmallScreen ? "fade-up" : "fade-left"}
                     data-aos-duration="500"
                     data-aos-delay="2500"
                     data-aos-once="true"
                 />
                 <p
                     className="lg:text-xl text-lg lg:mx-0 mx-2 text-center lg:text-left leading-relaxed"
-                    data-aos="fade-left"
+                    data-aos={isSmallScreen ? "fade-up" : "fade-left"}
                     data-aos-duration="500"
                     data-aos-delay="3000"
                     data-aos-once="true"

@@ -6,7 +6,7 @@ function Footer() {
     const { t } = useLanguageStore();
 
     return (
-        <footer className="flex flex-col items-center gap-y-3 py-8 min-h-20 bg-[#00120c] border-t-3 border-green-950 mt-70">
+        <footer className="flex flex-col items-center gap-y-3 py-8 min-h-20 bg-[#00120c] border-t-3  border-green-950 mt-70">
             <p className="text-stone-300 lg:text-lg text-lg flex items-center gap-x-2">
                 <Copyright size={18} /> 2025 - {t("hecho_con_amor")}
                 <span className="text-green-500 font-semibold">Abel Robaina</span></p>

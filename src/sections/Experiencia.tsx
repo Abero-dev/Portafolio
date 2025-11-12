@@ -8,7 +8,7 @@ function Experiencia() {
     const { t, language } = useLanguageStore();
 
     return (
-        <section id="Experiencia" className="min-h-screen flex flex-col justify-center items-center gap-y-10 lg:mt-0 mt-70">
+        <section id="Experiencia" className="min-h-screen flex flex-col justify-center items-center gap-y-10 md:pt-80 lg:pt-10 lg:mt-0 mt-70 xl:0">
             <div
                 className="text-center space-y-5"
                 data-aos="fade-down"
@@ -45,7 +45,7 @@ function Experiencia() {
                 </div>
                 <div className="flex gap-x-5 flex-wrap gap-y-4">
                     {techs.map(t =>
-                        <TechTag tech={t} />
+                        <TechTag key={t} tech={t} />
                     )}
                 </div>
             </div>
