@@ -1,31 +1,38 @@
+import { useIsSmallScreen } from "@/hooks/useIsSmallScreen"
 import TechCard from "../components/TechCard"
+import { useLanguageStore } from "@/store/languageStore";
 
 function Tecnologías() {
+
+    const isSmallScreen = useIsSmallScreen();
+    const { t } = useLanguageStore();
+
     return (
         <section id="Tecnologías" className="min-h-screen flex flex-col justify-center items-center gap-y-10 lg:mt-0 mt-70 pb-15">
             <h2
-                className="text-6xl text-green-500 font-bold"
+                className="text-4xl text-green-500 font-bold"
                 data-aos="fade-down"
                 data-aos-duration="500"
                 data-aos-delay="200"
-                data-aos-once="false"
+                data-aos-once="true"
             >
-                Tecnologías
+                {t("tecnologias")}
             </h2>
             <p
-                className="text-white text-2xl lg:p-0 lg:text-left text-center px-2"
+                className="text-gray-200 text-xl lg:p-0 lg:text-left text-center px-2"
                 data-aos="fade-down"
                 data-aos-duration="500"
                 data-aos-delay="200"
-                data-aos-once="false"
+                data-aos-once="true"
             >
-                A continuación se muestran las tecnologías con las que he interactuado recientemente:
+                {t("tecn_subtitulo")}:
             </p>
-            <div className="flex lg:flex-row flex-col lag:gap-y-0 gap-y-10 justify-center gap-x-15">
-                <div data-aos="fade-right"
+            <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-5 gap-5.5">
+                <div
+                    data-aos={isSmallScreen ? "fade-up" : "fade-right"}
                     data-aos-duration="500"
                     data-aos-delay="700"
-                    data-aos-once="false"
+                    data-aos-once="true"
                 >
                     <TechCard
                         title="Frontend"
@@ -33,24 +40,26 @@ function Tecnologías() {
 
                     />
                 </div>
-                <div className="flex flex-col lg:gap-y-5 gap-y-10">
-                    <div data-aos="fade-left"
+                <div className="flex flex-col lg:gap-2 gap-5.5">
+                    <div
+                        data-aos={isSmallScreen ? "fade-up" : "fade-left"}
                         data-aos-duration="500"
-                        data-aos-delay="950"
-                        data-aos-once="false"
+                        data-aos-delay={isSmallScreen ? "100" : "950"}
+                        data-aos-once="true"
                     >
                         <TechCard
                             title="Backend"
                             icons={["Nest.js", "PostgresSQL"]}
                         />
                     </div>
-                    <div data-aos="fade-left"
+                    <div
+                        data-aos={isSmallScreen ? "fade-up" : "fade-left"}
                         data-aos-duration="500"
-                        data-aos-delay="1200"
-                        data-aos-once="false"
+                        data-aos-delay={isSmallScreen ? "100" : "1200"}
+                        data-aos-once="true"
                     >
                         <TechCard
-                            title="Herramientas"
+                            title={t("herramientas")}
                             icons={["Git", "Docker", "Playwright"]}
                         />
                     </div>

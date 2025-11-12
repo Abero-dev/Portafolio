@@ -6,48 +6,64 @@ export function useTypingEffect(text: string, options?: {
     pauseTime?: number
 }) {
     const [displayText, setDisplayText] = useState('')
+    const [currentIndex, setCurrentIndex] = useState(0)
+    const [isDeleting, setIsDeleting] = useState(false)
+
     const animationRef = useRef({
-        currentIndex: 0,
-        isDeleting: false,
-        fullText: text,
         typingSpeed: options?.typingSpeed ?? 100,
         deletingSpeed: options?.deletingSpeed ?? 50,
         pauseTime: options?.pauseTime ?? 2000
     })
 
+    // Actualizar las opciones cuando cambian
     useEffect(() => {
-        const animate = () => {
-            const state = animationRef.current
+        animationRef.current = {
+            typingSpeed: options?.typingSpeed ?? 100,
+            deletingSpeed: options?.deletingSpeed ?? 50,
+            pauseTime: options?.pauseTime ?? 2000
+        }
+    }, [options?.typingSpeed, options?.deletingSpeed, options?.pauseTime])
 
-            if (!state.isDeleting) {
-                if (state.currentIndex <= state.fullText.length) {
-                    setDisplayText(state.fullText.substring(0, state.currentIndex))
-                    state.currentIndex++
-                    setTimeout(animate, state.typingSpeed)
+    useEffect(() => {
+        let timeoutId: NodeJS.Timeout
+
+        const animate = () => {
+            const { typingSpeed, deletingSpeed, pauseTime } = animationRef.current
+
+            if (!isDeleting) {
+                // Modo escritura
+                if (currentIndex <= text.length) {
+                    setDisplayText(text.substring(0, currentIndex))
+                    setCurrentIndex(prev => prev + 1)
+                    timeoutId = setTimeout(animate, typingSpeed)
                 } else {
-                    setTimeout(() => {
-                        state.isDeleting = true
-                        animate()
-                    }, state.pauseTime)
+                    // Terminó de escribir, iniciar borrado después de pausa
+                    timeoutId = setTimeout(() => {
+                        setIsDeleting(true)
+                    }, pauseTime)
                 }
             } else {
-                if (state.currentIndex > 0) {
-                    setDisplayText(state.fullText.substring(0, state.currentIndex - 1))
-                    state.currentIndex--
-                    setTimeout(animate, state.deletingSpeed)
+                // Modo borrado
+                if (currentIndex > 0) {
+                    setDisplayText(text.substring(0, currentIndex - 1))
+                    setCurrentIndex(prev => prev - 1)
+                    timeoutId = setTimeout(animate, deletingSpeed)
                 } else {
-                    state.isDeleting = false
-                    setTimeout(() => {
-                        state.currentIndex = 0
-                        animate()
+                    // Terminó de borrar, reiniciar ciclo
+                    setIsDeleting(false)
+                    timeoutId = setTimeout(() => {
+                        setCurrentIndex(0)
                     }, 500)
                 }
             }
         }
 
-        animate()
-        return () => { }
-    }, [])
+        timeoutId = setTimeout(animate, isDeleting ? animationRef.current.deletingSpeed : animationRef.current.typingSpeed)
+
+        return () => {
+            clearTimeout(timeoutId)
+        }
+    }, [text, currentIndex, isDeleting])
 
     return displayText
 }

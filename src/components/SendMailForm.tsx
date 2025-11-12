@@ -1,9 +1,15 @@
 
+import { useIsSmallScreen } from '@/hooks/useIsSmallScreen';
+import { useLanguageStore } from '@/store/languageStore';
 import { SendIcon } from 'lucide-react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
 function SendMailForm() {
+
+    const isSmallScreen = useIsSmallScreen();
+    const { t } = useLanguageStore();
+
     const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>(
         'idle'
     );
@@ -48,30 +54,33 @@ function SendMailForm() {
     return (
         <form
             onSubmit={handleSubmit}
-            className='bg-[#00120c] border-3 border-green-950 rounded-2xl p-8 space-y-6'
-            data-aos="fade-right"
+            className='bg-[#00120c] border-3 border-green-950 rounded-2xl p-4 space-y-4'
+            data-aos={isSmallScreen ? "fade-up" : "fade-right"}
             data-aos-duration="500"
             data-aos-delay="700"
-            data-aos-once="false"
+            data-aos-once="true"
         >
             <div className='grid sm:grid-cols-2 gap-6'>
                 <div className='space-y-4'>
-                    <label htmlFor='name' className='text-xl text-gray-200 font-bold'>
-                        Nombre
+                    <label
+                        htmlFor='name'
+                        className='text-md text-gray-200 font-bold'
+                    >
+                        {t("nombre")}
                     </label>
                     <input
                         id='name'
                         name='name'
                         type='text'
-                        placeholder='Tu nombre'
+                        placeholder={t("tu_nombre")}
                         required
-                        className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-3 text-xl text-stone-100 placeholder:text-xl placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all duration-300'
+                        className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-1 text-md text-stone-100 placeholder:text-md placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all duration-300'
                     />
                 </div>
                 <div className='space-y-4'>
                     <label
                         htmlFor='email'
-                        className='text-xl text-gray-200 font-bold'
+                        className='text-md text-gray-200 font-bold'
                     >
                         Email
                     </label>
@@ -79,9 +88,9 @@ function SendMailForm() {
                         id='email'
                         name='email'
                         type='email'
-                        placeholder='tu@email.com'
+                        placeholder={`${t("tu_correo")}@email.com`}
                         required
-                        className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-3 text-xl text-stone-100 placeholder:text-xl placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all duration-300'
+                        className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-1 text-md text-stone-100 placeholder:text-md placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all duration-300'
                     />
                 </div>
             </div>
@@ -89,42 +98,42 @@ function SendMailForm() {
             <div className='space-y-2'>
                 <label
                     htmlFor='message'
-                    className='text-xl text-gray-200 font-bold'
+                    className='text-md text-gray-200 font-bold'
                 >
-                    Mensaje
+                    {t("mensaje")}
                 </label>
                 <textarea
                     id='message'
                     name='message'
-                    placeholder='Cuéntame sobre tu proyecto...'
+                    placeholder={`${t("cuentame")}...`}
                     rows={6}
                     required
-                    className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-3 text-xl text-stone-100 placeholder:text-xl placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none resize-none transition-all duration-300'
+                    className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-1 text-md text-stone-100 placeholder:text-md placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none resize-none transition-all duration-300'
                 ></textarea>
             </div>
 
             <button
                 type='submit'
                 disabled={status === 'sending'}
-                className='w-full bg-green-600 hover:bg-green-800 text-2xl text-white py-4 font-semibold rounded-xl flex items-center justify-center gap-2 transition-all duration-300 drop-shadow-lg drop-shadow-green-900 group'
+                className='w-full bg-green-600 hover:bg-green-800 text-lg text-white py-4 font-semibold rounded-xl flex items-center justify-center gap-2 transition-all duration-300 drop-shadow-lg drop-shadow-green-900 group'
             >
                 {status === 'sending' ? (
-                    'Enviando...'
+                    `${t("enviando")}...`
                 ) : (
                     <>
-                        <SendIcon className='w-8 h-8' /> Enviar Mensaje
+                        <SendIcon className='w-6 h-6' /> {t("enviar_mensaje")}
                     </>
                 )}
             </button>
 
             {status === 'sent' && (
-                <p className='text-green-600 text-2xl text-center'>
-                    ✅ Mensaje enviado correctamente.
+                <p className='text-green-600 text-xl text-center'>
+                    ✅ {t("mensaje_exito")}.
                 </p>
             )}
             {status === 'error' && (
-                <p className='text-red-600 text-2xl text-center'>
-                    ❌ Error al enviar el mensaje.
+                <p className='text-red-600 text-xl text-center'>
+                    ❌ {t("mensaje_error")}.
                 </p>
             )}
         </form>
