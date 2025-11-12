@@ -25,7 +25,7 @@ export function useTypingEffect(text: string, options?: {
     }, [options?.typingSpeed, options?.deletingSpeed, options?.pauseTime])
 
     useEffect(() => {
-        let timeoutId: NodeJS.Timeout
+        let timeoutId: any;
 
         const animate = () => {
             const { typingSpeed, deletingSpeed, pauseTime } = animationRef.current
