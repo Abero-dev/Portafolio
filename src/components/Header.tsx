@@ -17,7 +17,7 @@ function Header() {
 
     const displayText = useTypingEffect('<Abero-Dev/>')
     const scrollToSection = useScrollToSection()
-    const { t } = useLanguageStore();
+    const { t, language } = useLanguageStore();
 
     return (
         <header
@@ -66,8 +66,8 @@ function Header() {
                 <LanguageToggle />
                 <a
                     className="px-4 py-2 lg:mt-0 -mt-5 bg-green-600 text-white text-xl lg:text-xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-800 transition-colors duration-300"
-                    href="/pdf/Cv-Abel-Robaina-Mata.pdf"
-                    download="Cv-Abel-Robaina-Mata.pdf"
+                    href={`/pdf/CV-Abel-Robaina-Mata-${language === 'es' ? 'ES' : 'EN'}.pdf`}
+                    download={`CV-Abel-Robaina-Mata-${language === 'es' ? 'ES' : 'EN'}.pdf`}
                 >
                     {t("descargar_cv")}
                 </a>
