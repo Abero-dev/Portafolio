@@ -10,7 +10,7 @@ function Footer() {
             <p className="text-stone-300 lg:text-lg text-lg flex items-center gap-x-2">
                 <Copyright size={18} /> 2025 - {t("hecho_con_amor")}
                 <span className="text-green-500 font-semibold">Abel Robaina</span></p>
-            <p className="text-md text-stone-300 text-center">{t("construido_con")}
+            <p className="text-md text-stone-300 text-center px-2">{t("construido_con")}
                 <span className="text-green-500"> React </span>
                 -
                 <span className="text-green-500"> Vite </span>

@@ -26,7 +26,7 @@ function Header() {
                 : ''
                 }`}
         >
-            <div className="flex justify-center lg:mt-0 mt-5 max-w-20 hover:scale-125 transition-transform duration-300 mr-15">
+            <div className="flex justify-center lg:mt-0 mt-5 max-w-20 hover:scale-125 transition-transform duration-300 lg:mr-15">
                 <span
                     className="text-xl text-green-500 font-bold drop-shadow-green-700 drop-shadow-xl inline-block min-w-[180px] text-center max-w-full overflow-hidden cursor-pointer"
                     onClick={() => scrollToSection('Hero')}
