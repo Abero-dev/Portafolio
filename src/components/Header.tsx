@@ -17,7 +17,7 @@ import { Menu } from 'lucide-react'
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
-    const { t, language } = useLanguageStore();
+    const { t } = useLanguageStore();
     const displayText = useTypingEffect('<Abero-Dev/>')
     const scrollToSection = useScrollToSection()
     const isSmallScreen = useIsSmallScreen(); // Your custom hook
