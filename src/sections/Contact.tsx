@@ -9,7 +9,7 @@ function Contact() {
     const { t } = useLanguageStore();
 
     return (
-        <section id="Contacto" className='min-h-screen px-4 sm:px-6 lg:px-34 py-4 md:pt-80 lg:pt-1 pt-30 bg-gradient-to-b from-[#00120c] to-gray-950'>
+        <section id="Contacto" className='min-h-screen px-4 sm:px-6 lg:px-34 py-4 md:pt-80 lg:pt-1 pt-30 bg-linear-to-b from-[#00120c] to-gray-950'>
             <div
                 className='text-center mb-12 sm:mb-16 lg:mt-40'
                 data-aos="fade-down"
@@ -23,11 +23,11 @@ function Contact() {
             </div>
 
             <div className='flex flex-col lg:grid lg:grid-cols-2 gap-5'>
-                <div className='order-1 lg:order-none'>
+                <div className='order-1 lg:order-0'>
                     <SendMailForm />
                 </div>
 
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 order-2 lg:order-none'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 order-2 lg:order-0'>
                     {/* Email */}
                     <div
                         data-aos={isSmallScreen ? "fade-up" : "fade-left"}

@@ -52,27 +52,27 @@ function Header() {
                                 <Menu size={28} />
                             </button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent align="center" className="w-48 bg-background">
+                        <DropdownMenuContent align="center" className="w-48 bg-gray-800 border-2 border-green-500 font-semibold">
                             <DropdownMenuItem
-                                className="cursor-pointer px-4 py-2 text-lg text-stone-100 hover:text-green-400 hover:bg-white/5 rounded-md transition-all duration-200 focus:text-green-400 focus:bg-white/5"
+                                className="cursor-pointer px-4 py-2 text-lg text-green-400 drop-shadow-xl drop-shadow-green-800 border-green-500 hover:text-green-400 hover:bg-gray-800/5 rounded-md transition-all duration-200 focus:text-green-400 focus:bg-white/5"
                                 onSelect={() => scrollToSection('Experiencia')}
                             >
                                 {t("experienciaHeader")}
                             </DropdownMenuItem>
                             <DropdownMenuItem
-                                className="cursor-pointer px-4 py-2 text-lg text-stone-100 hover:text-green-400 hover:bg-white/5 rounded-md transition-all duration-200 focus:text-green-400 focus:bg-white/5"
+                                className="cursor-pointer px-4 py-2 text-lg text-green-400 drop-shadow-xl drop-shadow-green-800 border-green-500 hover:text-green-400 hover:bg-gray-800/5 rounded-md transition-all duration-200 focus:text-green-400 focus:bg-white/5"
                                 onSelect={() => scrollToSection('Tecnologías')}
                             >
                                 {t("tecnologias")}
                             </DropdownMenuItem>
                             <DropdownMenuItem
-                                className="cursor-pointer px-4 py-2 text-lg text-stone-100 hover:text-green-400 hover:bg-white/5 rounded-md transition-all duration-200 focus:text-green-400 focus:bg-white/5"
+                                className="cursor-pointer px-4 py-2 text-lg text-green-400 drop-shadow-xl drop-shadow-green-800 border-green-500 hover:text-green-400 hover:bg-gray-800/5 rounded-md transition-all duration-200 focus:text-green-400 focus:bg-white/5"
                                 onSelect={() => scrollToSection('Proyectos')}
                             >
                                 {t("proyectos")}
                             </DropdownMenuItem>
                             <DropdownMenuItem
-                                className="cursor-pointer px-4 py-2 text-lg text-stone-100 hover:text-green-400 hover:bg-white/5 rounded-md transition-all duration-200 focus:text-green-400 focus:bg-white/5"
+                                className="cursor-pointer px-4 py-2 text-lg text-green-400 drop-shadow-xl drop-shadow-green-800 border-green-500 hover:text-green-400 hover:bg-white/5 rounded-md transition-all duration-200 focus:text-green-400 focus:bg-white/5"
                                 onSelect={() => scrollToSection('Contacto')}
                             >
                                 {t("contactoHeader")}
