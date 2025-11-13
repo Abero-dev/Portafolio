@@ -7,9 +7,9 @@ function Proyectos() {
     const { t, language } = useLanguageStore();
 
     return (
-        <section id="Proyectos" className="min-h-screen flex flex-col justify-center items-center gap-y-20 md:pt-80 lg:pt-0 lg:px-50 px-5 lg:mt-0 pt-30">
+        <section id="Proyectos" className="min-h-screen flex flex-col justify-center items-center gap-y-20 md:pt-80 lg:py-0 lg:pb-15 lg:px-50 px-5 lg:mt-0 py-30 bg-linear-to-t from-[#00120c] to-gray-950">
             <h2
-                className="text-4xl text-green-500 font-bold lg:mt-50"
+                className="text-4xl text-green-400 font-bold lg:mt-50"
                 data-aos="fade-down"
                 data-aos-duration="500"
                 data-aos-delay="200"

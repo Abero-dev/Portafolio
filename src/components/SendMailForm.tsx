@@ -1,4 +1,3 @@
-
 import { useIsSmallScreen } from '@/hooks/useIsSmallScreen';
 import { useLanguageStore } from '@/store/languageStore';
 import { SendIcon } from 'lucide-react';
@@ -54,7 +53,7 @@ function SendMailForm() {
     return (
         <form
             onSubmit={handleSubmit}
-            className='bg-[#00120c] border-3 border-green-950 rounded-2xl p-4 space-y-4'
+            className='bg-[#001a13] border-2 border-green-800 rounded-2xl p-4 space-y-4 hover:border-green-600 transition-colors duration-300'
             data-aos={isSmallScreen ? "fade-up" : "fade-right"}
             data-aos-duration="500"
             data-aos-delay="700"
@@ -64,7 +63,7 @@ function SendMailForm() {
                 <div className='space-y-1'>
                     <label
                         htmlFor='name'
-                        className='text-md text-gray-200 font-bold'
+                        className='text-md text-gray-100 font-bold'
                     >
                         {t("nombre")}
                     </label>
@@ -74,14 +73,14 @@ function SendMailForm() {
                         type='text'
                         placeholder={t("tu_nombre")}
                         required
-                        className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-1 text-md text-stone-100 placeholder:text-md placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all duration-300'
+                        className='w-full bg-gray-900 border-2 border-green-700 hover:border-green-500 focus:border-green-400 rounded-lg p-2 text-md text-gray-100 placeholder:text-md placeholder:text-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none transition-all duration-300'
                     />
-                    <span className='text-gray-500'>{t("tu_nombre")}</span>
+                    <span className='text-gray-400'>{t("tu_nombre")}</span>
                 </div>
                 <div className='space-y-1'>
                     <label
                         htmlFor='email'
-                        className='text-md text-gray-200 font-bold'
+                        className='text-md text-gray-100 font-bold'
                     >
                         Email
                     </label>
@@ -91,16 +90,16 @@ function SendMailForm() {
                         type='email'
                         placeholder={`${t("tu_correo")}@email.com`}
                         required
-                        className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-1 text-md text-stone-100 placeholder:text-md placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all duration-300'
+                        className='w-full bg-gray-900 border-2 border-green-700 hover:border-green-500 focus:border-green-400 rounded-lg p-2 text-md text-gray-100 placeholder:text-md placeholder:text-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none transition-all duration-300'
                     />
-                    <span className='text-gray-500'>{`${t("tu_correo")}@email.com`}</span>
+                    <span className='text-gray-400'>{`${t("tu_correo")}@email.com`}</span>
                 </div>
             </div>
 
             <div className='space-y-2'>
                 <label
                     htmlFor='message'
-                    className='text-md text-gray-200 font-bold'
+                    className='text-md text-gray-100 font-bold'
                 >
                     {t("mensaje")}
                 </label>
@@ -110,14 +109,14 @@ function SendMailForm() {
                     placeholder={`${t("cuentame")}...`}
                     rows={6}
                     required
-                    className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-1 text-md text-stone-100 placeholder:text-md placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none resize-none transition-all duration-300'
+                    className='w-full bg-gray-900 border-2 border-green-700 hover:border-green-500 focus:border-green-400 rounded-lg p-2 text-md text-gray-100 placeholder:text-md placeholder:text-gray-400 focus:ring-2 focus:ring-green-500 focus:outline-none resize-none transition-all duration-300'
                 ></textarea>
             </div>
 
             <button
                 type='submit'
                 disabled={status === 'sending'}
-                className='w-full bg-green-600 hover:bg-green-800 text-lg text-white py-4 font-semibold rounded-xl flex items-center justify-center gap-2 transition-all duration-300 drop-shadow-lg drop-shadow-green-900 group'
+                className='w-full bg-green-500 hover:bg-green-400 hover:text-gray-900 text-lg text-white py-4 font-semibold rounded-xl flex items-center justify-center gap-2 transition-all duration-300 shadow-lg shadow-green-900/30 hover:shadow-green-400/20 hover:scale-105'
             >
                 {status === 'sending' ? (
                     `${t("enviando")}...`
@@ -129,12 +128,12 @@ function SendMailForm() {
             </button>
 
             {status === 'sent' && (
-                <p className='text-green-600 text-xl text-center'>
+                <p className='text-green-400 text-xl text-center font-medium'>
                     ✅ {t("mensaje_exito")}.
                 </p>
             )}
             {status === 'error' && (
-                <p className='text-red-600 text-xl text-center'>
+                <p className='text-red-400 text-xl text-center font-medium'>
                     ❌ {t("mensaje_error")}.
                 </p>
             )}
