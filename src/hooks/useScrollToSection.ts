@@ -6,7 +6,7 @@ export function useScrollToSection() {
         const isMobile = window.innerWidth <= 768
 
         const offset = isMobile ? 350 : 0
-        const top = section.getBoundingClientRect().top + window.scrollY - offset
+        const top = section.getBoundingClientRect().top + window.scrollY
 
         window.scrollTo({ top, behavior: 'smooth' })
     }

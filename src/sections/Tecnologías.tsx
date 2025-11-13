@@ -8,7 +8,7 @@ function Tecnologías() {
     const { t } = useLanguageStore();
 
     return (
-        <section id="Tecnologías" className="min-h-screen flex flex-col justify-center items-center gap-y-10 md:pt-80 lg:pt-0 lg:mt-0 mt-70 pb-15">
+        <section id="Tecnologías" className="min-h-screen flex flex-col justify-center items-center gap-y-10 md:pt-80 lg:pt-30 lg:mt-0 pt-30">
             <h2
                 className="text-4xl text-green-500 font-bold"
                 data-aos="fade-down"

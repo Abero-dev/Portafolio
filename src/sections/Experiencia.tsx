@@ -8,7 +8,7 @@ function Experiencia() {
     const { t, language } = useLanguageStore();
 
     return (
-        <section id="Experiencia" className="min-h-screen flex flex-col justify-center items-center gap-y-10 md:pt-80 lg:pt-10 lg:mt-0 mt-70 xl:0">
+        <section id="Experiencia" className="min-h-screen flex flex-col justify-center items-center gap-y-10 md:pt-80 lg:pt-10 lg:mt-0 pt-30 xl:pt-0">
             <div
                 className="text-center space-y-5"
                 data-aos="fade-down"

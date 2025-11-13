@@ -11,10 +11,10 @@ function Hero() {
     const { t, language } = useLanguageStore();
 
     return (
-        <section id="Hero" className="min-h-screen text-white flex lg:flex-row flex-col justify-around lg:pt-10 pt-75 lg:-space-x-30 items-center bg-linear-to-br from-black via-black to-green-950 overflow-hidden px-4">
+        <section id="Hero" className="min-h-screen text-white flex lg:flex-row flex-col justify-around lg:pt-10 pt-10 lg:-space-x-30 items-center bg-linear-to-br from-black via-black to-green-950 overflow-hidden px-4">
 
             <div
-                className="flex justify-center lg:mt-0 max-w-full"
+                className="flex justify-center lg:mt-0 max-w-full -mb-5"
                 data-aos="zoom-in"
                 data-aos-duration="1500"
                 data-aos-once="true"
@@ -26,7 +26,7 @@ function Hero() {
                 />
             </div>
 
-            <div className={`lg:max-w-[40%] flex flex-col gap-y-5 px-2 flex-wrap lg:mt-0 mt-10`}>
+            <div className={`lg:max-w-[40%] flex flex-col gap-y-5 px-2 flex-wrap lg:mt-0`}>
                 <p
                     className="lg:text-5xl text-3xl font-bold md:text-center lg:text-left text-center leading-tight"
                     data-aos={isSmallScreen ? "fade-up" : "fade-left"}
@@ -40,7 +40,7 @@ function Hero() {
                     className={'lg:text-3xl text-xl lg:text-left text-center'}
                     data-aos={isSmallScreen ? "fade-up" : "fade-left"}
                     data-aos-duration="500"
-                    data-aos-delay="2000"
+                    data-aos-delay={isSmallScreen ? "1500" : "2000"}
                     data-aos-once="true"
                 >
                     {`{${t("usuario")}.status === '${t("complacido")}' &&`}
@@ -95,10 +95,10 @@ function Hero() {
                 </p>
 
                 <div
-                    className="flex lg:flex-row flex-col items-center lg:gap-x-10 lg:gap-y-0 gap-y-6 mt-10 flex-wrap justify-center lg:justify-start"
+                    className="flex lg:flex-row  flex-col items-center lg:gap-x-5 lg:gap-y-0 gap-y-6 mt-10 flex-wrap justify-center lg:justify-start"
                     data-aos="fade-up"
                     data-aos-duration="500"
-                    data-aos-delay={`${isSmallScreen ? "100" : "3000"}`}
+                    data-aos-delay="3000"
                     data-aos-once="true"
                 >
                     <button
@@ -108,19 +108,28 @@ function Hero() {
                         <p>{t("ver_proyectos")}</p>
                         <ArrowDown size={30} />
                     </button>
-                    <button
-                        onClick={() => scrollToSection('Contacto')}
-                        className="cursor-pointer border-2 border-gray-600 px-4 py-2 rounded-lg text-lg lg:text-xl hover:border-green-500 hover:scale-110 transition-all duration-300"
-                    >
-                        {t("contactame")}
-                    </button>
+                    <div className="flex gap-x-5">
+                        <button
+                            onClick={() => scrollToSection('Contacto')}
+                            className="cursor-pointer border-2 border-gray-600 px-4 py-2 rounded-lg text-lg lg:text-xl hover:border-green-500 hover:scale-110 transition-all duration-300"
+                        >
+                            {t("contactame")}
+                        </button>
+                        <a
+                            className="px-4 py-2 bg-green-600 text-white text-xl lg:text-xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-800 transition-colors duration-300"
+                            href={`/pdf/CV-Abel-Robaina-Mata-${language === 'es' ? 'ES' : 'EN'}.pdf`}
+                            download={`CV-Abel-Robaina-Mata-${language === 'es' ? 'ES' : 'EN'}.pdf`}
+                        >
+                            {t("descargar_cv")}
+                        </a>
+                    </div>
                 </div>
 
                 <div
                     className="flex justify-center lg:justify-normal gap-x-4 lg:mt-4 lg:pb-0 pb-4"
                     data-aos="fade-up"
                     data-aos-duration="500"
-                    data-aos-delay={isSmallScreen ? "0" : "3500"}
+                    data-aos-delay="3500"
                     data-aos-once="true"
                 >
                     <a href="https://github.com/Abero-dev" target="_blank" rel='noopener noreferrer'>

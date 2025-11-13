@@ -61,7 +61,7 @@ function SendMailForm() {
             data-aos-once="true"
         >
             <div className='grid sm:grid-cols-2 gap-6'>
-                <div className='space-y-4'>
+                <div className='space-y-1'>
                     <label
                         htmlFor='name'
                         className='text-md text-gray-200 font-bold'
@@ -76,8 +76,9 @@ function SendMailForm() {
                         required
                         className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-1 text-md text-stone-100 placeholder:text-md placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all duration-300'
                     />
+                    <span className='text-gray-500'>{t("tu_nombre")}</span>
                 </div>
-                <div className='space-y-4'>
+                <div className='space-y-1'>
                     <label
                         htmlFor='email'
                         className='text-md text-gray-200 font-bold'
@@ -92,6 +93,7 @@ function SendMailForm() {
                         required
                         className='w-full bg-[#000805] border-2 border-green-900 hover:border-green-400 rounded-lg p-1 text-md text-stone-100 placeholder:text-md placeholder:text-stone-400 focus:ring-1 focus:ring-green-500 focus:outline-none transition-all duration-300'
                     />
+                    <span className='text-gray-500'>{`${t("tu_correo")}@email.com`}</span>
                 </div>
             </div>
 
