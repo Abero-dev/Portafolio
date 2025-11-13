@@ -41,7 +41,7 @@ function Hero() {
                         className={'lg:text-3xl text-xl lg:text-left text-center'}
                         data-aos={isSmallScreen ? "fade-up" : "fade-left"}
                         data-aos-duration="500"
-                        data-aos-delay={isSmallScreen ? "1500" : "2000"}
+                        data-aos-delay="2000"
                         data-aos-once="true"
                     >
                         {`{${t("usuario")}.status === '${t("complacido")}' &&`}
@@ -50,7 +50,7 @@ function Hero() {
                         className="lg:text-3xl text-xl lg:text-left text-center"
                         data-aos={isSmallScreen ? "fade-up" : "fade-left"}
                         data-aos-duration="500"
-                        data-aos-delay={isSmallScreen ? "1500" : "2000"}
+                        data-aos-delay="2000"
                         data-aos-once="true"
                     >
                         {'<span>🥳💚</span> }'}
