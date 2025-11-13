@@ -14,7 +14,7 @@ function Hero() {
         <section id="Hero" className="min-h-screen text-white flex lg:flex-row flex-col justify-around lg:pt-10 pt-10 lg:-space-x-30 items-center bg-linear-to-br from-black via-black to-green-950 overflow-hidden px-4">
 
             <div
-                className="flex justify-center lg:mt-0 max-w-full -mb-5"
+                className="flex justify-center lg:mt-0 max-w-full mb-8"
                 data-aos="zoom-in"
                 data-aos-duration="1500"
                 data-aos-once="true"
@@ -22,7 +22,7 @@ function Hero() {
                 <img
                     alt="mi_foto"
                     src="img/profile.webp"
-                    className="lg:w-100 lg:h-100 w-48 h-48 rounded-full border-3 drop-shadow-2xl drop-shadow-green-950 border-transparent hover:border-green-800 hover:scale-110 transition duration-300 max-w-full object-cover"
+                    className="lg:w-100 lg:h-100 w-40 h-40 rounded-full border-3 drop-shadow-2xl drop-shadow-green-950 border-transparent hover:border-green-800 hover:scale-110 transition duration-300 max-w-full object-cover"
                 />
             </div>
 
