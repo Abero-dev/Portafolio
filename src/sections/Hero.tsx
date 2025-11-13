@@ -14,7 +14,7 @@ function Hero() {
         <section id="Hero" className="min-h-screen text-white flex lg:flex-row flex-col justify-around lg:pt-10 pt-10 lg:-space-x-30 items-center bg-linear-to-br from-black via-black to-green-950 overflow-hidden px-4">
 
             <div
-                className="flex justify-center lg:mt-0 max-w-full my-5 lg:mb-0"
+                className="flex justify-center lg:mt-0 max-w-full my-5 lg:my-0"
                 data-aos="zoom-in"
                 data-aos-duration="1500"
                 data-aos-once="true"
@@ -95,7 +95,7 @@ function Hero() {
                 </p>
 
                 <div
-                    className="flex lg:flex-row  flex-col items-center lg:gap-x-5 lg:gap-y-0 gap-y-6 mt-10 flex-wrap justify-center lg:justify-start"
+                    className="flex lg:flex-row flex-col items-center lg:gap-x-5 lg:gap-y-0 gap-y-6 mt-5 lg:mt-10 flex-wrap justify-center lg:justify-start"
                     data-aos="fade-up"
                     data-aos-duration="500"
                     data-aos-delay="3000"
