@@ -14,7 +14,7 @@ function Hero() {
         <section id="Hero" className="min-h-screen text-white flex lg:flex-row flex-col justify-around lg:pt-10 pt-10 lg:-space-x-30 items-center bg-linear-to-br from-black via-black to-green-950 overflow-hidden px-4">
 
             <div
-                className="flex justify-center lg:mt-0 max-w-full mb-8"
+                className="flex justify-center lg:mt-0 max-w-full mb-20 lg:mb-0"
                 data-aos="zoom-in"
                 data-aos-duration="1500"
                 data-aos-once="true"
