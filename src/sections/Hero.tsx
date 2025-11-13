@@ -36,24 +36,26 @@ function Hero() {
                 >
                     {t("soyHero")} <span className="text-green-500">Abel Robaina</span>, {t("profesion")}
                 </p>
-                <p
-                    className={'lg:text-3xl text-xl lg:text-left text-center'}
-                    data-aos={isSmallScreen ? "fade-up" : "fade-left"}
-                    data-aos-duration="500"
-                    data-aos-delay={isSmallScreen ? "1500" : "2000"}
-                    data-aos-once="true"
-                >
-                    {`{${t("usuario")}.status === '${t("complacido")}' &&`}
-                </p>
-                <p
-                    className="lg:text-3xl text-xl lg:text-left text-center"
-                    data-aos={isSmallScreen ? "fade-up" : "fade-left"}
-                    data-aos-duration="500"
-                    data-aos-delay="2000"
-                    data-aos-once="true"
-                >
-                    {'<span>🥳💚</span> }'}
-                </p>
+                <div className="flex flex-col gap-x-2">
+                    <p
+                        className={'lg:text-3xl text-xl lg:text-left text-center'}
+                        data-aos={isSmallScreen ? "fade-up" : "fade-left"}
+                        data-aos-duration="500"
+                        data-aos-delay={isSmallScreen ? "1500" : "2000"}
+                        data-aos-once="true"
+                    >
+                        {`{${t("usuario")}.status === '${t("complacido")}' &&`}
+                    </p>
+                    <p
+                        className="lg:text-3xl text-xl lg:text-left text-center"
+                        data-aos={isSmallScreen ? "fade-up" : "fade-left"}
+                        data-aos-duration="500"
+                        data-aos-delay="2000"
+                        data-aos-once="true"
+                    >
+                        {'<span>🥳💚</span> }'}
+                    </p>
+                </div>
                 <p
                     className="lg:text-xl text-lg lg:mx-0 mx-2 text-center lg:text-left leading-relaxed"
                     data-aos={isSmallScreen ? "fade-up" : "fade-left"}
