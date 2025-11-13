@@ -36,7 +36,7 @@ function Experiencia() {
                         <p className="text-2xl font-bold">{t("profesion")}</p>
                         <p className="text-lg text-stone-400 font-bold">{t("centro")}</p>
                     </div>
-                    <p className="border-2 border-green-800 bg-green-950 text-md text-green-400 px-4 py-1 rounded-full font-semibold">2024 - {t("presente")}</p>
+                    <p className=" text-md text-green-400 px-4 py-1 rounded-full font-semibold">2024 - {t("presente")}</p>
                 </div>
                 <div className="text-gray-300">
                     <p className="text-lg font-bold">
