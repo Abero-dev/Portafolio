@@ -36,7 +36,7 @@ function Hero() {
                 >
                     {t("soyHero")} <span className="text-green-500">Abel Robaina</span>, {t("profesion")}
                 </p>
-                <div className="flex flex-col gap-x-1">
+                <div className="flex flex-col gap-y-1">
                     <p
                         className={'lg:text-3xl text-xl lg:text-left text-center'}
                         data-aos={isSmallScreen ? "fade-up" : "fade-left"}
@@ -96,53 +96,55 @@ function Hero() {
                     }
                 </p>
 
-                <div
-                    className="flex lg:flex-row flex-col items-center lg:gap-x-5 lg:gap-y-0 gap-y-6 mt-5 lg:mt-10 flex-wrap justify-center lg:justify-start"
-                    data-aos="fade-up"
-                    data-aos-duration="500"
-                    data-aos-delay="3000"
-                    data-aos-once="true"
-                >
-                    <button
-                        onClick={() => scrollToSection('Proyectos')}
-                        className="flex items-center gap-x-3 px-4 py-2 bg-green-600 text-stone-300 text-lg lg:text-xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-800 transition-colors duration-300"
+                <div className="flex flex-col gap-y-2">
+                    <div
+                        className="flex lg:flex-row flex-col items-center lg:gap-x-5 lg:gap-y-0 gap-y-6 mt-5 lg:mt-10 flex-wrap justify-center lg:justify-start"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay="3000"
+                        data-aos-once="true"
                     >
-                        <p>{t("ver_proyectos")}</p>
-                        <ArrowDown size={30} />
-                    </button>
-                    <div className="flex gap-x-5">
                         <button
-                            onClick={() => scrollToSection('Contacto')}
-                            className="cursor-pointer border-2 border-gray-600 px-4 py-2 rounded-lg text-lg lg:text-xl hover:border-green-500 hover:scale-110 transition-all duration-300"
+                            onClick={() => scrollToSection('Proyectos')}
+                            className="flex items-center gap-x-3 px-4 py-2 bg-green-600 text-stone-300 text-lg lg:text-xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-800 transition-colors duration-300"
                         >
-                            {t("contactame")}
+                            <p>{t("ver_proyectos")}</p>
+                            <ArrowDown size={30} />
                         </button>
-                        <a
-                            className="px-4 py-2 bg-green-600 text-white text-xl lg:text-xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-800 transition-colors duration-300"
-                            href={`/pdf/CV-Abel-Robaina-Mata-${language === 'es' ? 'ES' : 'EN'}.pdf`}
-                            download={`CV-Abel-Robaina-Mata-${language === 'es' ? 'ES' : 'EN'}.pdf`}
-                        >
-                            {t("descargar_cv")}
+                        <div className="flex gap-x-5">
+                            <button
+                                onClick={() => scrollToSection('Contacto')}
+                                className="cursor-pointer border-2 border-gray-600 px-4 py-2 rounded-lg text-lg lg:text-xl hover:border-green-500 hover:scale-110 transition-all duration-300"
+                            >
+                                {t("contactame")}
+                            </button>
+                            <a
+                                className="px-4 py-2 bg-green-600 text-white text-xl lg:text-xl font-bold rounded-lg cursor-pointer drop-shadow-green-800 drop-shadow-lg hover:bg-green-800 transition-colors duration-300"
+                                href={`/pdf/CV-Abel-Robaina-Mata-${language === 'es' ? 'ES' : 'EN'}.pdf`}
+                                download={`CV-Abel-Robaina-Mata-${language === 'es' ? 'ES' : 'EN'}.pdf`}
+                            >
+                                {t("descargar_cv")}
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        className="flex justify-center lg:justify-normal gap-x-4 lg:mt-4 lg:pb-0 pb-4"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay={isSmallScreen ? "0" : "3500"}
+                        data-aos-once="true"
+                    >
+                        <a href="https://github.com/Abero-dev" target="_blank" rel='noopener noreferrer'>
+                            <Github className="w-10 h-10 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/abel-robaina-89a918360/" target="_blank" rel='noopener noreferrer'>
+                            <Linkedin className="w-10 h-10 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
+                        </a>
+                        <a href="mailto:abel04.mata@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <Mail className="w-10 h-10 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
                         </a>
                     </div>
-                </div>
-
-                <div
-                    className="flex justify-center lg:justify-normal gap-x-4 lg:mt-4 lg:pb-0 pb-4"
-                    data-aos="fade-up"
-                    data-aos-duration="500"
-                    data-aos-delay={isSmallScreen ? "0" : "3500"}
-                    data-aos-once="true"
-                >
-                    <a href="https://github.com/Abero-dev" target="_blank" rel='noopener noreferrer'>
-                        <Github className="w-10 h-10 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/abel-robaina-89a918360/" target="_blank" rel='noopener noreferrer'>
-                        <Linkedin className="w-10 h-10 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
-                    </a>
-                    <a href="mailto:abel04.mata@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <Mail className="w-10 h-10 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
-                    </a>
                 </div>
             </div>
         </section>
