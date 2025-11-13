@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
 export function useIsSmallScreen() {
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1080);
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 640);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsSmallScreen(window.innerWidth <= 1080);
+            setIsSmallScreen(window.innerWidth <= 640);
         };
 
         window.addEventListener('resize', handleResize);
