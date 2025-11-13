@@ -96,7 +96,11 @@ function Hero() {
                     }
                 </p>
 
-                <div className="flex flex-col gap-y-2">
+                <div className="flex flex-col gap-y-2"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="3000"
+                    data-aos-once="true">
                     <div
                         className="flex lg:flex-row flex-col items-center lg:gap-x-5 lg:gap-y-0 gap-y-6 mt-5 lg:mt-10 flex-wrap justify-center lg:justify-start"
                         data-aos="fade-up"
@@ -130,10 +134,6 @@ function Hero() {
 
                     <div
                         className="flex justify-center lg:justify-normal gap-x-4 lg:mt-4 lg:pb-0 pb-4"
-                        data-aos="fade-up"
-                        data-aos-duration="500"
-                        data-aos-delay={isSmallScreen ? "0" : "3500"}
-                        data-aos-once="true"
                     >
                         <a href="https://github.com/Abero-dev" target="_blank" rel='noopener noreferrer'>
                             <Github className="w-10 h-10 p-2 border-2 border-transparent rounded-lg hover:bg-green-950 hover:stroke-green-400 transition-all duration-300" />
